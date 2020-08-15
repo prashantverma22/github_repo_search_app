@@ -14,7 +14,7 @@ const Header = () => {
     return(
         <Navbar color="light" light expand="md">
             <NavbarBrand>
-                <Link to='/' className='text-white'>
+                <Link to='/'>
                 GitSearch
                 </Link>
             </NavbarBrand>
