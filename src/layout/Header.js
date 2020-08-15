@@ -12,13 +12,13 @@ const Header = () => {
     const toggle = () => setIsToggle(!isToggle);
 
     return(
-        <Navbar color="info" light expand="md">
+        <Navbar color="light" light expand="md">
             <NavbarBrand>
                 <Link to='/' className='text-white'>
                 GitSearch
                 </Link>
             </NavbarBrand>
-            <NavbarText className='text-white'>
+            <NavbarText>
                 { context.user?.email ? context.user.email : '' }
             </NavbarText>
             <NavbarToggler onClick = {toggle} />
@@ -27,15 +27,15 @@ const Header = () => {
                 {
                     context.user ? (
                         <NavItem>
-                          <NavLink style={{cursor: 'pointer'}} onClick={() => {context.setUser(null)}} className='text-white'>Logout</NavLink>
+                          <NavLink tag={Link} onClick={() => {context.setUser(null)}}>Logout</NavLink>
                         </NavItem>
                     ) : (
                         <>
                         <NavItem>
-                          <NavLink tag={Link} to='/signup' className='text-white'>Sign up</NavLink>
+                          <NavLink tag={Link} to='/signup'>Sign up</NavLink>
                         </NavItem>
                         <NavItem>
-                          <NavLink tag={Link} to='/signin' className='text-white'>Sign in</NavLink>
+                          <NavLink tag={Link} to='/signin'>Sign in</NavLink>
                         </NavItem>
                         </>
                     )
