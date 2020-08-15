@@ -5,7 +5,7 @@ import {Card ,CardBody} from 'reactstrap';
 const UserCard = ({ user }) => {
     return(
         <Card className='text-margin mt-3 mb-4'>
-            <img src={user.avatar_url} className='img-thumnail' />
+            <img src={user.avatar_url} className='img-thumbnail' />
             <CardBody>
               <div className='text-primary'>{user.name}</div>
               <div className='text-primary'>{user.location}</div>
