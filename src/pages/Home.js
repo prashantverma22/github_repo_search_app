@@ -28,7 +28,7 @@ const Home = () => {
             setUser(data);
             console.log({data});
         } catch (error) {
-            toast('Not able to locate user.', {type: 'error'});
+            toast('Not able to locate user.', {type: 'error', position: 'bottom-center'});
         }
     }
 
@@ -45,10 +45,10 @@ const Home = () => {
                   type="text"
                   value={query}
                   onChange={e => setQuery(e.target.value)}
-                  placeholder="Please provide the username"
+                  placeholder="Enter the username"
                 />
                 <InputGroupAddon addonType="append">
-                  <Button onClick={fetchDetails} color="primary">Fetch User</Button>
+                  <Button onClick={fetchDetails} color="primary">Search User</Button>
                 </InputGroupAddon>
               </InputGroup>
               {user ? <UserCard user={user} />  : null }
