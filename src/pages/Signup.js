@@ -26,7 +26,8 @@ const Signup = () => {
         .catch(error => {
             console.log(error);
             toast(error.message, {
-                type: 'error'
+                type: 'error',
+                position: 'bottom-center'
             })
         })
     }
